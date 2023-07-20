@@ -1,0 +1,21 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+<form class="m-auto w-50 p-5 mt-5 bg-dark form-control-lg" action="/forgotpass" method="post">
+    <h1 class="mb-4 text-light">Enter Existing Email</h1>
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="email"
+        name="johndoe@gmail.com"
+    />
+    <!-- <p class="text-end">
+        <a href="/forget-password">Forget Password ?</a>
+    </p> -->
+
+    <button class="btn btn-primary mt-2">Send mail</button>
+    <p class="mt-1"> <a href="/signup">SignUp</a> <span class="text-light">|</span>  <a href="/signin">SignIn</a> </p>
+    
+</form>
+
+<%- include("partials/footer")%>

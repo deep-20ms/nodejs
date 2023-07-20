@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %> <%- include("partials/nav.ejs")%>
+
+<div class="container w-50 mt-2 p-5 bg-dark text-center text-light">
+  <h1 class="text-dark-50 p-1">Profile Page</h1>
+  <!-- <a class="btn btn-outline-primary mt-2" href="/signin">sign in</a>
+  <a class="btn btn-outline-primary mt-2" href="/signup">sign up</a> -->
+  <p>Welcome to profile page</p>
+  <hr />
+  <h3>List of all users</h3>
+  <ul class="list-group w-100">
+    <% users.forEach((user)=>{ %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <%= user.username %>
+      <span>
+        <a href="/update/<%= user._id%>">✏️</a> <a href="/delete/<%= user._id%>">❌</a>
+        
+      </span>
+    </li>
+    <%})%>
+  </ul>
+</div>
+
+<%- include("partials/footer.ejs")%>
